@@ -24,6 +24,10 @@ attr_accessor :word
     @@words.fetch(id)
   end
 
+  def delete
+
+  end
+
 
 
 end
