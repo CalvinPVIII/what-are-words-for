@@ -25,7 +25,7 @@ attr_accessor :word
   end
 
   def delete
-
+    @@words.delete(@id)
   end
 
 

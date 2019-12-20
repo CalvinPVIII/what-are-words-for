@@ -35,7 +35,7 @@ it("should delete a specific word based on id")do
 word = Word.new("First", nil)
 word2 = Word.new("Second", nil)
 word.delete
-expect(Word.all.to(eq([word2]))
+expect(Word.all).to(eq([word2]))
 end
 end
 
