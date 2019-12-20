@@ -20,6 +20,9 @@ attr_accessor :word
     @@words = {}
   end
 
+  def self.search(id)
+
+  end
 
 
 
