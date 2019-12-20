@@ -29,7 +29,7 @@ get ("/words/:id")do
   @word = Word.search(params[:id].to_i)
   @definitions = Definition.all
   @keys = Definition.all_id
-  binding.pry
+
   erb(:word)
 end
 
@@ -82,6 +82,5 @@ end
 get ("/words/:id/definitions/:definition_id")do
   @word = Word.search(params[:id].to_i)
   @definition = @word.definition
-  binding.pry
   erb(:definition)
 end

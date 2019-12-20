@@ -1,14 +1,11 @@
 <h2 class="heading"><%= @word.word %></h2>
 
-  <% if @keys.include?(@word.id) %>
+  <% if @definitions.any? %>
   <ul>
-  <% Definition.all.each do |object| %>
-  <% object.each do |definition| %>
+  <% Definition.all.each do |definition| %>
   <% if definition.word_id == @word.id %>
-  <li><a href="/words/<%= @word.id %>/definitions/<%= @word.definition[0].id %>"><%= definition.definition %></a></li>
+  <li><a href="/words/<%= @word.id %>/definitions/<%= definition.id %>"><%= definition.definition %></a></li>
   <% else %>
-    <h4>Currently there is no definition for the word <%= @word.word %></h4>
-  <%end%>
   <%end%>
   <%end%>
   <%end%>

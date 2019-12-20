@@ -7,8 +7,7 @@ class Definition
     @definition = definition
     @word_id = word_id
     @id = id || @@total_rows += 1
-    @@definitions[self.word_id] = []
-    @@definitions[self.word_id].push(self)
+    @@definitions[self.id] = self
   end
 
 

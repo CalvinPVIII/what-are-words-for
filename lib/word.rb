@@ -28,8 +28,14 @@ attr_accessor :word
     @@words.delete(@id)
   end
 
-  def definition
-    Definition.search(@id)
+  def definitions
+    definitions = []
+    Definition.all.each do |definition|
+      if definition.word_id == word_id
+        definitions.push(definition)
+      end
+    end
+    return definitions
   end
 
   def self.all_id
