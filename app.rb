@@ -47,14 +47,32 @@ get ("/words/:id/definitions/update")do
   erb(:update_definition)
 end
 
-patch ("/words/:id")do
+patch ("/words/:id/definitions")do
   definition = Definition.search(params[:id].to_i)
   definition.definition = params[:definition]
   redirect to('/')
 end
 
-delete ("/words/:id")do
+delete ("/words/:id/definitions")do
   definition = Definition.search(params[:id].to_i)
   definition.delete
+  redirect to('/')
+end
+
+get ("/words/:id/update")do
+  @word = Word.search(params[:id].to_i)
+  erb(:update_word)
+end
+
+
+patch ("/words/:id")do
+  word = Word.search(params[:id].to_i)
+  word.word = params[:word]
+  redirect to('/')
+end
+
+delete ("/words/:id")do
+  word = Word.search(params[:id].to_i)
+  word.delete
   redirect to('/')
 end

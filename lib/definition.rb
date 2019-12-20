@@ -22,9 +22,11 @@ class Definition
   def self.search(word_id)
     @@definitions.fetch(word_id)
   end
+  
   def delete
     @@definitions.delete(@word_id)
   end
+
   def word
     Word.search(@word_id)
   end
