@@ -1,4 +1,5 @@
 class Word
+attr_reader :id
 attr_accessor :word
 
 @@words = {}
