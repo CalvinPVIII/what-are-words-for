@@ -1,13 +1,20 @@
-<h2><%= @word.word %></h2>
+<h2 class="heading"><%= @word.word %></h2>
 
   <% if @keys.include?(@word.id) %>
-    <h3><%= @word.definition.definition %></h3>
-    <a href="/words/<%= @word.id %>/definitions/update">Update Definition</a>
+  <ul>
+  <% Definition.all.each do |object| %>
+  <% object.each do |definition| %>
+  <% if definition.word_id == @word.id %>
+  <li><a href="/words/<%= @word.id %>/definitions/<%= @word.definition[0].id %>"><%= definition.definition %></a></li>
   <% else %>
     <h4>Currently there is no definition for the word <%= @word.word %></h4>
-    <a href="/words/<%= @word.id %>/definitions/new">Add a Definition</a>
+  <%end%>
+  <%end%>
+  <%end%>
   <%end%>
 <br>
-<a href="/words/<%= @word.id %>/update">Update Word</a>
+<a href="/words/<%= @word.id %>/definitions/new" class="button">Add a Definition</a>
 <br>
-<a href="/">Return Home</a>
+<a href="/words/<%= @word.id %>/update" class="button">Update Word</a>
+<br>
+<a href="/" class="button">Return Home</a>

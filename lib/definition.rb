@@ -7,7 +7,8 @@ class Definition
     @definition = definition
     @word_id = word_id
     @id = id || @@total_rows += 1
-    @@definitions[self.word_id] = self
+    @@definitions[self.word_id] = []
+    @@definitions[self.word_id].push(self)
   end
 
 
@@ -22,7 +23,7 @@ class Definition
   def self.search(word_id)
     @@definitions.fetch(word_id)
   end
-  
+
   def delete
     @@definitions.delete(@word_id)
   end

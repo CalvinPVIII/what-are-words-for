@@ -30,10 +30,45 @@ h2 {
 }
 
 .button {
+  display: flex;
+  align-items: flex-end;
   background-color: #C6D8D3
   border: none;
   color: #e0dbd1;
   display: inline-block;
-  padding: 10px 15px;
+  padding: 5px 7px;
   margin: 4px 2px;
+}
+
+input {
+  border: none;
+
+  background-color: #1f242e;
+  color: #e0dbd1;
+}
+
+.definition {
+  text-align: center;
+}
+
+.actions {
+  float: right;
+
+}
+
+.main_button {
+  display: flex;
+  align-items: flex-end;
+  background-color: #C6D8D3
+  border: none;
+  color: #e0dbd1;
+  display: inline-block;
+  padding: 5px 7px;
+  margin: 4px 2px;
+  font-size: 30px;
+}
+
+.main_button:hover {
+  font-size: 220%;
+  color: #e0dbd1;
 }
