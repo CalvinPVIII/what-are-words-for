@@ -28,6 +28,8 @@ attr_accessor :word
     @@words.delete(@id)
   end
 
-
+  def definition
+    Definition.search(@id)
+  end
 
 end

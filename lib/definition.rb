@@ -1,5 +1,5 @@
 class Definition
-  attr_reader :id
+  attr_reader :id, :word_id
   attr_accessor :definition
   @@definitions = {}
   @@total_rows = 0
@@ -7,7 +7,7 @@ class Definition
     @definition = definition
     @word_id = word_id
     @id = id || @@total_rows += 1
-    @@definitions[self.id] = self
+    @@definitions[self.word_id] = self
   end
 
 

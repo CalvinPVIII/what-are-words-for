@@ -41,9 +41,7 @@ end
 describe("#word") do
 it("should return the word that is being defined")do
 word = Word.new("First", nil)
-word2 = Word.new("Second", nil)
 definition = Definition.new("The initial thing", word.id, nil)
-definition2 = Definition.new("The following thing", word2.id, nil)
 expect(definition.word).to(eq(word))
 end
 end
