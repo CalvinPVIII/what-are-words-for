@@ -1,4 +1,6 @@
-class Defintion
+class Definition
+  attr_reader :id
+  attr_accessor :definition
   @@definitions = {}
   @@total_rows = 0
   def initialize(definition, word_id, id)
@@ -20,7 +22,12 @@ class Defintion
   def self.search(id)
     @@definitions.fetch(id)
   end
-
+  def delete
+    @@definitions.delete(@id)
+  end
+  def word
+    # Word.search(@word_id)
+  end
 
 
 
