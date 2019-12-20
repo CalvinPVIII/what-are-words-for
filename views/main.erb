@@ -3,10 +3,11 @@
 <h2>Current List of Words</h2>
 
 <% if @words.any? %>
-<% @words.each do |word| %>
 <ul>
+<% @words.each do |word| %>
 <li> <a href="words/<%= word.id%>"><%= word.word %></a></li>
 <% end %>
+</ul>
 <% else %>
 <h5>There are no words to show</h5>
 <% end %>

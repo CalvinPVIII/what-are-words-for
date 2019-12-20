@@ -28,13 +28,11 @@ end
 get ("/words/:id")do
   @word = Word.search(params[:id].to_i)
   @definitions = Definition.all
-  binding.pry
   erb(:word)
 end
 
 get ("/words/:id/definitions/new")do
-@word = Word.search(params[:id].to_i)
-binding.pry
+  @word = Word.search(params[:id].to_i)
   erb(:new_definition)
 end
 
