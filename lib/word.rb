@@ -21,7 +21,7 @@ attr_accessor :word
   end
 
   def self.search(id)
-
+    @@words.fetch(id)
   end
 
 
