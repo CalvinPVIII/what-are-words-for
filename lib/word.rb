@@ -17,7 +17,7 @@ attr_accessor :word
   end
 
   def self.clear
-    
+    @@words = {}
   end
 
 
