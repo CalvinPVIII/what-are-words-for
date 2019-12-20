@@ -32,4 +32,9 @@ attr_accessor :word
     Definition.search(@id)
   end
 
+  def self.all_id
+    @@words.keys
+  end
+
+
 end

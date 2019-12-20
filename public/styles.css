@@ -1,0 +1,39 @@
+body {
+  background-image: url("http://getwallpapers.com/wallpaper/full/6/5/d/560817.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  font-family: 'Cabin Sketch', cursive;
+}
+
+.heading {
+  text-align: center;
+  font-size: 90px;
+}
+
+.writing {
+  font-size: 25px;
+  color: white;
+  font-family: 'Kranky', cursive;
+}
+
+a {
+  color: #e0dbd1;
+}
+a:hover {
+  font-size: 120%;
+  color: #e0dbd1;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+.button {
+  background-color: #C6D8D3
+  border: none;
+  color: #e0dbd1;
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 4px 2px;
+}

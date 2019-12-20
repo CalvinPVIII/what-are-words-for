@@ -1,14 +1,16 @@
-<h1>Words</h1>
+<h1 class="heading">Words</h1>
 
 <h2>Current List of Words</h2>
 
 <% if @words.any? %>
 <ul>
 <% @words.each do |word| %>
-<li> <a href="words/<%= word.id%>"><%= word.word %></a></li>
+<li class="writing"> <a href="words/<%= word.id%>"><%= word.word %></a></li>
 <% end %>
 </ul>
+<a href="/words/<%= Word.all_id.sample %>" id="random_word" class="button">Random Word</a>
+<br>
 <% else %>
 <h5>There are no words to show</h5>
 <% end %>
-<a href="/words/new">Add a new Word</a>
+<a href="/words/new" class="button">Add a new Word</a>
