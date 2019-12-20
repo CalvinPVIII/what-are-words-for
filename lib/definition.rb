@@ -26,7 +26,7 @@ class Definition
     @@definitions.delete(@id)
   end
   def word
-    # Word.search(@word_id)
+    Word.search(@word_id)
   end
 
 
