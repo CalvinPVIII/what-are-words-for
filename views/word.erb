@@ -1,0 +1,7 @@
+<h2><%= @word.word %></h2>
+<% if @definitions == [] %>
+<h4>Currently there is no definition for the word <%= @word.word %></h4>
+<a href="/words/<%= @word.id %>/definitions/new">Click here to add a definition</a>
+<% else %>
+<h3><%= @word.definition.definition %></h3>
+<%end%>
