@@ -23,12 +23,15 @@ class Definition
     @@definitions.fetch(word_id)
   end
   def delete
-    @@definitions.delete(@id)
+    @@definitions.delete(@word_id)
   end
   def word
     Word.search(@word_id)
   end
 
+  def self.all_id
+    @@definitions.keys
+  end
 
 
 
