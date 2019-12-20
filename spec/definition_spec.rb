@@ -1,7 +1,7 @@
 require('rspec')
-require('project')
+require('definition')
 
-describe ('#project') do
+describe ('#definition') do
   it()do
     expect().to(eq())
   end

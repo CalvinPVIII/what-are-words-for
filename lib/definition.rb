@@ -1,0 +1,4 @@
+class Defintion
+  def initialize(argument)
+    @argument = argument
+  end
