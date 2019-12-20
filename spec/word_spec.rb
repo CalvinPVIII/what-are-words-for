@@ -26,7 +26,7 @@ describe(".search") do
 it("should return for a specific word based on id")do
 word = Word.new("First", nil)
 word2 = Word.new("Second", nil)
-expect(Word.search(14)).to(eq(word))
+expect(Word.search(15)).to(eq(word))
 end
 end
 
