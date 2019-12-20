@@ -14,9 +14,11 @@ attr_accessor :word
 
   def self.all
     @@words.values()
-
   end
 
+  def self.clear
+    
+  end
 
 
 

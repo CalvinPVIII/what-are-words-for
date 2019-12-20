@@ -13,6 +13,15 @@ word2 = Word.new("Second", nil)
 end
 end
 
+describe(".all") do
+it("should clear all words stored in the hash")do
+word = Word.new("First", nil)
+word2 = Word.new("Second", nil)
+Word.clear
+  expect(Word.all).to(eq([]))
+end
+end
+
 #   describe("#word") do
 #   it("should create a word and store it in the words hash")do
 #   word = Word.new("Test")
