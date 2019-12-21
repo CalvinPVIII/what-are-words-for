@@ -24,7 +24,7 @@ class Definition
   end
 
   def delete
-    @@definitions.delete(@word_id)
+    @@definitions.delete(@id)
   end
 
   def word

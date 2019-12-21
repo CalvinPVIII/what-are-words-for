@@ -55,8 +55,8 @@ patch ("/words/:id/definitions/:definition_id")do
   redirect to('/')
 end
 
-delete ("/words/:id/definitions")do
-  definition = Definition.search(params[:id].to_i)
+delete ("/words/:id/definitions/:definition_id/delete")do
+  definition = Definition.search(params[:definition_id].to_i)
   definition.delete
   redirect to('/')
 end
