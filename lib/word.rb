@@ -31,7 +31,7 @@ attr_accessor :word
   def definitions
     definitions = []
     Definition.all.each do |definition|
-      if definition.word_id == word_id
+      if definition.word_id == @id
         definitions.push(definition)
       end
     end

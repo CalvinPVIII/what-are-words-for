@@ -40,10 +40,10 @@ end
 end
 
 describe("#definition") do
-it("should return the definition of the word")do
+it("should return the definitions of the word")do
 word = Word.new("First", nil)
 definition = Definition.new("The initial thing", word.id, nil)
-expect(word.definition).to(eq(definition))
+expect(word.definitions).to(eq([definition]))
 end
 end
 

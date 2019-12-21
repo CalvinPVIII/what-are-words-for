@@ -50,7 +50,7 @@ get ("/words/:id/definitions/:definition_id/update")do
 end
 
 patch ("/words/:id/definitions/:definition_id")do
-  definition = Definition.search(params[:id].to_i)
+  definition = Definition.search(params[:definition_id].to_i)
   definition.definition = params[:definition]
   redirect to('/')
 end

@@ -30,6 +30,7 @@ describe('update a definition', {:type => :feature}) do
   it('updates a definition') do
     visit('/')
     click_on('Blue')
+    click_on('Color that is opposite of Orange')
     click_on('Update Definition')
     fill_in('definition', :with => "Primary color that isn't red or yellow")
     click_on('Redefine')
@@ -42,10 +43,11 @@ describe('delete a definition', {:type => :feature}) do
   it('deletes a definition') do
     visit('/')
     click_on('Blue')
+    click_on("Primary color that isn't red or yellow")
     click_on('Update Definition')
-    click_on('Delete definition')
+    click_on('Delete Definition')
     click_on("Blue")
-    expect(page).to have_content("Currently there is no definition for the word Blue")
+    expect(page).to have_no_content("Primary color that isn't red or yellow")
   end
 end
 
