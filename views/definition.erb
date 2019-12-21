@@ -1,0 +1,10 @@
+<h2 class="definition"><%= @definition.definition %></h2>
+
+  <h3 class="definition"><a href="/words/<%= @word.id %>"><%= @word.word %></a></h3>
+
+<br>
+<a href="/words/<%= @word.id %>/definitions/new" class="button">Add a Definition</a>
+<br>
+<a href="/words/<%= @word.id %>/definitions/<%= @definition.id %>/update" class="button">Update Definition</a>
+<br>
+<a href="/" class="button">Return Home</a>

@@ -43,12 +43,13 @@ post ("/words/:id")do
   redirect to('/')
 end
 
-get ("/words/:id/definitions/update")do
+get ("/words/:id/definitions/:definition_id/update")do
   @word = Word.search(params[:id].to_i)
+  @definition = Definition.search(params[:definition_id].to_i)
   erb(:update_definition)
 end
 
-patch ("/words/:id/definitions")do
+patch ("/words/:id/definitions/:definition_id")do
   definition = Definition.search(params[:id].to_i)
   definition.definition = params[:definition]
   redirect to('/')
@@ -81,6 +82,6 @@ end
 
 get ("/words/:id/definitions/:definition_id")do
   @word = Word.search(params[:id].to_i)
-  @definition = @word.definition
+  @definition = Definition.search(params[:definition_id].to_i)
   erb(:definition)
 end

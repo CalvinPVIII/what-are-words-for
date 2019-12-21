@@ -19,8 +19,8 @@ class Definition
     @@definitions = {}
   end
 
-  def self.search(word_id)
-    @@definitions.fetch(word_id)
+  def self.search(id)
+    @@definitions.fetch(id)
   end
 
   def delete

@@ -1,10 +1,10 @@
 <h2 class="heading"><%= @word.word %></h2>
 
   <% if @definitions.any? %>
-  <ul>
-  <% Definition.all.each do |definition| %>
+
+  <% @definitions.each do |definition| %>
   <% if definition.word_id == @word.id %>
-  <li><a href="/words/<%= @word.id %>/definitions/<%= definition.id %>"><%= definition.definition %></a></li>
+  <h3 class="definition"><a href="/words/<%= @word.id %>/definitions/<%= definition.id %>"><%= definition.definition %></a></h3>
   <% else %>
   <%end%>
   <%end%>
