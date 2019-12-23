@@ -26,6 +26,9 @@ _What Are Words For is a simple web app that allows users to add words and defin
 * _Run the command "ruby app.rb"_
 
 
+
+[_View Deployed Project_](https://safe-headland-20794.herokuapp.com/)
+
 ## Known Bugs
 
 _Currently there are no known bugs_
